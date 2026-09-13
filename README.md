@@ -24,12 +24,14 @@ MyLearnings/
 │       ├── Arrays.playground                  # Swift Array memory, indexing & existential containers
 │       └── Sets.playground                    # Set hashing, collisions, Equatable & Set algebra
 └── DSA Design Pattern/
-    ├── TEMPLATE.md                            # Standard beginner-friendly markdown template
+    ├── TEMPLATE.md                            # Standard beginner-friendly markdown template (with Mermaid)
     └── Two Pointers/
-        ├── 1. Two Pointers.md                 # Master overview, comparison matrix & decision tree
+        ├── 1. Two Pointers.md                 # Master overview, comparison matrix & Mermaid decision tree
         ├── 2. Opposite Direction.md           # Two Sum II, Palindrome, Container With Water
         ├── 3. Fast & Slow Pointer.md          # Remove Duplicates, Move Zeroes, Cycle Detection
-        └── 4. Sliding Window.md               # Min Subarray Sum, Max Average Subarray, Substring
+        ├── 4. Sliding Window.md               # Min Subarray Sum, Max Average Subarray, Substring
+        ├── 5. Dutch National Flag.md          # 3-Pointer Partitioning (Sort Colors, Parity)
+        └── 6. Two Pointers Two Arrays.md      # Merge Sorted Array, Is Subsequence
 ```
 
 ---
@@ -54,16 +56,18 @@ This repository bridges high-level algorithmic theory with real low-level Swift 
 
 ---
 
-## 🎯 Current Covered Patterns
+## 🎯 Current Covered Patterns (With Native Mermaid Visuals 📊)
 
 ### [Pattern 1: Two Pointers Overview](file:///Users/akshatgandhi/Projects/Demo/MyLearnings/DSA%20Design%20Pattern/Two%20Pointers/1.%20Two%20Pointers.md)
 Transforms brute-force $O(N^2)$ nested loops into blazing-fast $O(N)$ single-pass solutions with $O(1)$ extra space.
 
-| Sub-Pattern | Guide Link | Mental Model | Best Used For |
-| :--- | :--- | :--- | :--- |
-| **Opposite Direction** | [2. Opposite Direction.md](file:///Users/akshatgandhi/Projects/Demo/MyLearnings/DSA%20Design%20Pattern/Two%20Pointers/2.%20Opposite%20Direction.md) | Numbered Street | Sorted Pair Sum, Palindromes, Reversals, Trapping Water |
-| **Fast & Slow** | [3. Fast & Slow Pointer.md](file:///Users/akshatgandhi/Projects/Demo/MyLearnings/DSA%20Design%20Pattern/Two%20Pointers/3.%20Fast%20&%20Slow%20Pointer.md) | Reader-Writer & Tortoise-Hare | In-place array deduplication, Move Zeroes, Linked List Cycle |
-| **Sliding Window** | [4. Sliding Window.md](file:///Users/akshatgandhi/Projects/Demo/MyLearnings/DSA%20Design%20Pattern/Two%20Pointers/4.%20Sliding%20Window.md) | Caterpillar & Camera Zoom | Contiguous subarrays/substrings, min/max window lengths |
+| Sub-Pattern | Guide Link | Mental Model | Best Used For | Mermaid Diagrams Included |
+| :--- | :--- | :--- | :--- | :---: |
+| **Opposite Direction** | [2. Opposite Direction.md](file:///Users/akshatgandhi/Projects/Demo/MyLearnings/DSA%20Design%20Pattern/Two%20Pointers/2.%20Opposite%20Direction.md) | Numbered Street | Sorted Pair Sum, Palindromes, Reversals, Trapping Water | ✅ Flowchart |
+| **Fast & Slow** | [3. Fast & Slow Pointer.md](file:///Users/akshatgandhi/Projects/Demo/MyLearnings/DSA%20Design%20Pattern/Two%20Pointers/3.%20Fast%20&%20Slow%20Pointer.md) | Reader-Writer & Tortoise-Hare | In-place array deduplication, Move Zeroes, Linked List Cycle | ✅ Flowchart |
+| **Sliding Window** | [4. Sliding Window.md](file:///Users/akshatgandhi/Projects/Demo/MyLearnings/DSA%20Design%20Pattern/Two%20Pointers/4.%20Sliding%20Window.md) | Caterpillar & Camera Zoom | Contiguous subarrays/substrings, min/max window lengths | ✅ Lifecycle Loop |
+| **Dutch National Flag** | [5. Dutch National Flag.md](file:///Users/akshatgandhi/Projects/Demo/MyLearnings/DSA%20Design%20Pattern/Two%20Pointers/5.%20Dutch%20National%20Flag.md) | 3-Color Bead Sorting | 3-way partitioning, sorting `[0, 1, 2]` in-place (Sort Colors) | ✅ 4-Zone Partition |
+| **Two Arrays / Sequences** | [6. Two Pointers Two Arrays.md](file:///Users/akshatgandhi/Projects/Demo/MyLearnings/DSA%20Design%20Pattern/Two%20Pointers/6.%20Two%20Pointers%20Two%20Arrays.md) | Two Checkout Queues | Merging sorted arrays from back, checking subsequences | ✅ Traversal Logic |
 
 ---
 
@@ -72,10 +76,12 @@ Transforms brute-force $O(N^2)$ nested loops into blazing-fast $O(N)$ single-pas
 Here is our structured roadmap of the **14 Core DSA Patterns** required for LeetCode mastery, listed in optimal learning order:
 
 ```text
-Phase 1: Linear Arrays & Pointers (In Progress)
-  ├── 1. Two Pointers (Opposite Direction)       [COMPLETED ✅]
-  ├── 2. Fast & Slow Pointers (Reader/Cycle)     [COMPLETED ✅]
-  └── 3. Sliding Window (Fixed & Dynamic)        [COMPLETED ✅]
+Phase 1: Linear Arrays & Multi-Pointers (Completed 🎉)
+  ├── 1. Opposite Direction (Inward Convergence)     [COMPLETED ✅]
+  ├── 2. Fast & Slow Pointers (Reader & Cycle)       [COMPLETED ✅]
+  ├── 3. Sliding Window (Fixed & Dynamic)            [COMPLETED ✅]
+  ├── 4. Dutch National Flag (3-Way Partitioning)    [COMPLETED ✅]
+  └── 5. Two Pointers on Two Arrays (Merging)        [COMPLETED ✅]
 
 Phase 2: Array Math & Space Reduction (Next Up 🚀)
   ├── 4. Prefix Sum & Running Sum Accumulation   [UPCOMING ⏳]

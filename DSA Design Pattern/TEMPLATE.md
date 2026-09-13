@@ -21,7 +21,7 @@
 ### What Is It?
 [Clear, concise definition of the pattern. Explain the roles of the pointers, variables, or data structures used.]
 
-### Visual Representation
+### Visual Representation (ASCII + Mermaid)
 ```text
 Initial State:
  [ 1,   3,   5,   7,   9,  11 ]
@@ -33,6 +33,15 @@ Initial State:
 Movement Rule:
  - If condition A is met: Left Pointer moves RIGHT (▶)
  - If condition B is met: Right Pointer moves LEFT  (◀)
+```
+
+```mermaid
+flowchart LR
+    L["Left Pointer (Start)"] --> Array["[ 1, 3, 5, 7, 9, 11 ]"]
+    R["Right Pointer (End)"] --> Array
+    Array --> Eval{"Evaluate Condition"}
+    Eval -- "Condition A" --> MoveL["Advance Left ▶"]
+    Eval -- "Condition B" --> MoveR["Advance Right ◀"]
 ```
 
 ---
@@ -55,10 +64,30 @@ Look for these **clues** and **keywords** in the problem statement:
 
 ---
 
-## 4. The Decision Rule Table 🧠
+## 4. The Decision Rule Table & Flowchart 🧠
 
-This table defines the **exact condition-to-action logic** at each iteration:
+### Mermaid Decision Engine
+```mermaid
+flowchart TD
+    Start(["Current State"]) --> Condition{"Check Condition"}
+    
+    Condition -- "Match Found" --> Found(["✅ Target Met<br>Record / Return"])
+    Condition -- "Metric Too Low" --> Inc["Advance Left Pointer<br>(Seek larger values)"]
+    Condition -- "Metric Too High" --> Dec["Decrement Right Pointer<br>(Seek smaller values)"]
+    
+    Inc --> LoopCheck{"Loop Invariant Valid?"}
+    Dec --> LoopCheck
+    LoopCheck -- "Yes" --> Start
+    LoopCheck -- "No" --> Terminate(["🛑 Terminate Loop"])
+    
+    style Condition fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
+    style Found fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style Inc fill:#fff3cd,stroke:#ffc107,stroke-width:2px
+    style Dec fill:#cce5ff,stroke:#004085,stroke-width:2px
+    style Terminate fill:#f8d7da,stroke:#dc3545,stroke-width:2px
+```
 
+### Decision Matrix
 | Current State / Condition | Action to Take | Why? (The Intuition) |
 | :--- | :--- | :--- |
 | `Current Value == Target` | ✅ Found answer / Record result | Desired condition satisfied. |
