@@ -185,13 +185,25 @@ var values: Set<Int?> = [1, nil, 3]
 // Ans:
 // - If the mutated property affects the hash value, the element becomes unreachable.
 // - Wrong:
-class User: Hashable {
+class User: Hashable, Equatable {
     var id: Int
+    
+    init(id: Int) {
+        self.id = id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func == (lhs: User, rhs: User) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
 // - Correct:
 
-struct User: Hashable {
+struct User1: Hashable {
     let id: Int
 }
 
@@ -235,3 +247,15 @@ let s2: Set = [3, 2, 1]
 print(s1 == s2)
 // Output: true
 // Because order doesn’t matter.
+
+
+let string = "🇬🇧"
+print(string.count)
+print((string as NSString).length)
+
+let newString = "🇨🇦🇺🇸"
+print(newString.replacingOccurrences(of: "🇦🇺", with: "🇳🇮"))
+print(newString.replacing("🇦🇺", with: "🇳🇮"))
+
+let message = "The rain in Spain"
+print(message[4])
