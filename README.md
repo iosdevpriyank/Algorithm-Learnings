@@ -1,4 +1,4 @@
-# 🚀 MyLearnings: Data Structures, Algorithms & Swift Engineering
+# 🚀 Algorithm-Learnings: Data Structures, Algorithms & Swift Engineering
 
 > A structured, beginner-friendly learning repository dedicated to mastering **Data Structures & Algorithms (DSA)**, **LeetCode Problem-Solving Patterns**, and **Deep Swift Language Internals**.
 
